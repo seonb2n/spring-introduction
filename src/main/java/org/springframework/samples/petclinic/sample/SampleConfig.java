@@ -11,4 +11,5 @@ public class SampleConfig {
 	public SampleController sampleController() {
 		return new SampleController();
 	}
+
 }

@@ -75,7 +75,6 @@ class OwnerControllerTests {
 		assertThat(bean).isNotNull();
 	}
 
-
 	@BeforeEach
 	void setup() {
 		george = new Owner();

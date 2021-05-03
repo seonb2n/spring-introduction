@@ -21,4 +21,5 @@ public class SampleControllerTest {
 		SampleController bean = applicationContext.getBean(SampleController.class);
 		assertThat(bean).isNotNull();
 	}
+
 }
