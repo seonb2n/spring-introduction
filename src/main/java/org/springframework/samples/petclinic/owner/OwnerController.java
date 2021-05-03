@@ -54,8 +54,7 @@ class OwnerController {
 	@GetMapping("/bean")
 	@ResponseBody
 	public String bean() {
-		return "bean" +  applicationContext.getBean(OwnerRepository.class)+"\n"
-			+ "owners : " + this.owners;
+		return "bean" +  applicationContext.getBean(OwnerRepository.class)+"\n" + "owners : " + this.owners;
 	}
 
 	@InitBinder
