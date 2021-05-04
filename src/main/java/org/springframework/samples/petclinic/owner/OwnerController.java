@@ -61,6 +61,7 @@ class OwnerController {
 		dataBinder.setDisallowedFields("id");
 	}
 
+	@LogExecutionTime
 	@GetMapping("/owners/new")
 	public String initCreationForm(Map<String, Object> model) {
 		Owner owner = new Owner();
@@ -68,6 +69,7 @@ class OwnerController {
 		return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
 	}
 
+	@LogExecutionTime
 	@PostMapping("/owners/new")
 	public String processCreationForm(@Valid Owner owner, BindingResult result) {
 		if (result.hasErrors()) {
@@ -85,6 +87,7 @@ class OwnerController {
 		return "owners/findOwners";
 	}
 
+	@LogExecutionTime
 	@GetMapping("/owners")
 	public String processFindForm(Owner owner, BindingResult result, Map<String, Object> model) {
 
@@ -119,6 +122,7 @@ class OwnerController {
 		return VIEWS_OWNER_CREATE_OR_UPDATE_FORM;
 	}
 
+	@LogExecutionTime
 	@PostMapping("/owners/{ownerId}/edit")
 	public String processUpdateOwnerForm(@Valid Owner owner, BindingResult result,
 			@PathVariable("ownerId") int ownerId) {
